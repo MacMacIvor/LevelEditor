@@ -62,6 +62,7 @@
     <Compile Include="Assets\cameraBehavior.cs" />
     <Compile Include="Assets\levelEditor.cs" />
     <Compile Include="Assets\uiScript.cs" />
+    <Compile Include="Assets\pointScript.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
