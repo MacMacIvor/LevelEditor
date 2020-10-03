@@ -10,6 +10,13 @@ public class highlightObjects : MonoBehaviour
     private bool isClicked = false;
     private bool isOnMouse = false;
 
+    private Vector3 startPosition;
+    private int currentAxis = 0;
+    private bool middleMouseClicked = false;
+    private Vector3 mouseStartPosition;
+    private int currentDisplacement = 0;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +28,34 @@ public class highlightObjects : MonoBehaviour
     {
         if (Input.GetMouseButton(0))
         {
-            if (isOnMouse == false)
+
+            Ray aRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitStuff;
+
+            if (Physics.Raycast(aRay, out hitStuff))
             {
-                isClicked = false; //Deselect the object
+                if (hitStuff.transform)
+                {
+                    if (hitStuff.transform.gameObject.name == gameObject.name)
+                    {
+                        isClicked = true;
+                    }
+                    else if (!Input.GetKey(KeyCode.LeftShift))
+                    {
+                        isClicked = false;
+                    }
+                }
             }
-           
-            isOnMouse = false;
+
+
+
+
+            //if (isOnMouse == false)
+            //{
+            //    isClicked = false; //Deselect the object
+            //}
+            //
+            //isOnMouse = false;
         }
 
         if (isClicked)
@@ -43,20 +72,99 @@ public class highlightObjects : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        else if (Input.GetMouseButtonDown(3) && isClicked)
+        
+        if (Input.GetKey(KeyCode.Mouse2) && isClicked)
         {
+
             //This will be a drag option for quick placement
-            //Deal with it tomorrow
+            if (middleMouseClicked == false)
+            {
+                startPosition = transform.position;
+                middleMouseClicked = true;
+                mouseStartPosition = Input.mousePosition;
+            }
+            else
+            {
+                switch (currentAxis)
+                {
+                    case 0: //z axis
+                        int theNewDisplacement = (int)((Input.mousePosition.y - mouseStartPosition.y) < 0 ? Mathf.Ceil((Input.mousePosition.y - mouseStartPosition.y) / 50) : Mathf.Floor((Input.mousePosition.y - mouseStartPosition.y) / 50));
+                        if (theNewDisplacement > currentDisplacement && currentDisplacement >= 0)
+                        {
+                            GameObject cloneOfObject = Instantiate(gameObject) as GameObject;
+                            cloneOfObject.transform.position = transform.position + new Vector3(0,0, GetComponent<Renderer>().bounds.size.z + GetComponent<Renderer>().bounds.size.z * currentDisplacement);
+                            currentDisplacement = theNewDisplacement;
+                        }
+                        else if (theNewDisplacement < currentDisplacement && currentDisplacement <= 0)
+                        {
+                            GameObject cloneOfObject = Instantiate(gameObject) as GameObject;
+                            cloneOfObject.transform.position = transform.position + new Vector3(0, 0, -GetComponent<Renderer>().bounds.size.z + GetComponent<Renderer>().bounds.size.z * currentDisplacement);
+                            currentDisplacement = theNewDisplacement;
+                        }
+                        break;
+
+                    case 1: //x axis
+                        int theNewDisplacement2 = (int)((Input.mousePosition.x - mouseStartPosition.x) < 0 ? Mathf.Ceil((Input.mousePosition.x - mouseStartPosition.x) / 100) : Mathf.Floor((Input.mousePosition.x - mouseStartPosition.x) / 100));
+                        if (theNewDisplacement2 > currentDisplacement)
+                        {
+                            currentDisplacement = theNewDisplacement2;
+                            GameObject cloneOfObject = Instantiate(gameObject) as GameObject;
+                            cloneOfObject.transform.position = transform.position + new Vector3(GetComponent<Renderer>().bounds.size.x * currentDisplacement, 0, 0);
+                        }
+                        else if (theNewDisplacement2 < currentDisplacement && currentDisplacement <= 0)
+                        {
+                            GameObject cloneOfObject = Instantiate(gameObject) as GameObject;
+                            cloneOfObject.transform.position = transform.position + new Vector3(GetComponent<Renderer>().bounds.size.x * currentDisplacement, 0, 0);
+                            currentDisplacement = theNewDisplacement2;
+                        }
+                        break;
+
+                    case 2: //y axis
+                        int theNewDisplacement3 = (int)((Input.mousePosition.y - mouseStartPosition.y) < 0 ? Mathf.Ceil((Input.mousePosition.y - mouseStartPosition.y) / 100) : Mathf.Floor((Input.mousePosition.y - mouseStartPosition.y) / 100));
+                        if (theNewDisplacement3 > currentDisplacement)
+                        {
+                            currentDisplacement = theNewDisplacement3;
+                            GameObject cloneOfObject = Instantiate(gameObject) as GameObject;
+                            cloneOfObject.transform.position = transform.position + new Vector3(0, GetComponent<Renderer>().bounds.size.y * currentDisplacement, 0);
+                        }
+                        else if (theNewDisplacement3 < currentDisplacement && currentDisplacement <= 0)
+                        {
+                            GameObject cloneOfObject = Instantiate(gameObject) as GameObject;
+                            cloneOfObject.transform.position = transform.position + new Vector3(0, GetComponent<Renderer>().bounds.size.y * currentDisplacement, 0);
+                            currentDisplacement = theNewDisplacement3;
+                        }
+                        break;
+                }
+            }
+
+        }
+        else
+        {
+            currentDisplacement = 0;
+            middleMouseClicked = false;
+        }
+        
+        if (Input.GetKey(KeyCode.Z))
+        {
+            currentAxis = 0;
+        }
+        else if (Input.GetKey(KeyCode.X))
+        {
+            currentAxis = 1;
+        }
+        else if(Input.GetKey(KeyCode.Y))
+        {
+            currentAxis = 2;
         }
         
 
     }
-    private void OnMouseDown()
-    {
-        if (Input.GetMouseButton(0))
-        {
-            isClicked = true;
-            isOnMouse = true;
-        }
-    }
+    //private void OnMouseDown()
+    //{
+    //    if (Input.GetMouseButton(0))
+    //    {
+    //        isClicked = true;
+    //        isOnMouse = true;
+    //    }
+    //}
 }
