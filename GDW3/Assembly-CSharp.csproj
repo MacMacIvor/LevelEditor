@@ -58,11 +58,12 @@
     <Compile Include="Assets\enemyBehavior.cs" />
     <Compile Include="Assets\followMouse.cs" />
     <Compile Include="Assets\bullet.cs" />
+    <Compile Include="Assets\highlightObjects.cs" />
     <Compile Include="Assets\Behavior.cs" />
     <Compile Include="Assets\cameraBehavior.cs" />
+    <Compile Include="Assets\levelEditor.cs" />
     <Compile Include="Assets\uiScript.cs" />
     <Compile Include="Assets\pointScript.cs" />
-    <Compile Include="Assets\highlightObjects.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

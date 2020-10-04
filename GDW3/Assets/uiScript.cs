@@ -18,18 +18,19 @@ public class uiScript : MonoBehaviour
     void Update()
     {
         Vector3 mousePos = Input.mousePosition;
-        if (Input.GetKey(KeyCode.Mouse0) && down == 0)
+        if (Input.GetKey(KeyCode.Mouse0))
         {
-            down = 1;
-            if (transform.position.x - 50 <= mousePos.x && transform.position.x + 50 >= mousePos.x && transform.position.y - 50 <= mousePos.y && transform.position.y + 50 >= mousePos.y)
+            if (down == 0)
             {
-                GameObject objects = Instantiate(objectToSpawnPrefab) as GameObject;
-                objects.transform.position = pointPos.transform.position;
+                if (transform.position.x - 50 <= mousePos.x && transform.position.x + 50 >= mousePos.x && transform.position.y - 50 <= mousePos.y && transform.position.y + 50 >= mousePos.y)
+                {
+                    GameObject objects = Instantiate(objectToSpawnPrefab) as GameObject;
+                    objects.name += mousePos.x * 0.1f * Random.Range(Random.Range(-1000000.0f, 0.0f), Random.Range(0.0f, 1000000.0f));
+                    objects.transform.position = pointPos.transform.position;
+                    objects.transform.parent = null;
+                }
             }
-        }
-        else if (Input.GetKey(KeyCode.Mouse1) && down == 1)
-        {
-            ;
+            down = 1;
         }
         else
         {
