@@ -16,19 +16,19 @@ public class highlightObjects : MonoBehaviour
     private Vector3 mouseStartPosition;
     private int currentDisplacement = 0;
 
+    private Vector3 mouseOffset;
+    float mouseZoffPut;
+
 
     // Start is called before the first frame update
     void Start()
     {
         render = GetComponent<MeshRenderer>();
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.parent = null;
-
         if (Input.GetMouseButton(0))
         {
 
@@ -95,15 +95,15 @@ public class highlightObjects : MonoBehaviour
                         if (theNewDisplacement > currentDisplacement && currentDisplacement >= 0)
                         {
                             GameObject cloneOfObject = Instantiate(gameObject) as GameObject;
-                            gameObject.name += Mathf.Pow(currentDisplacement * currentAxis * currentAxis * currentAxis, 3);
                             cloneOfObject.transform.position = transform.position + new Vector3(0,0, GetComponent<Renderer>().bounds.size.z + GetComponent<Renderer>().bounds.size.z * currentDisplacement);
+                            gameObject.name += Mathf.Pow(currentDisplacement * currentAxis * currentAxis * currentAxis, 3);
                             currentDisplacement = theNewDisplacement;
                         }
                         else if (theNewDisplacement < currentDisplacement && currentDisplacement <= 0)
                         {
                             GameObject cloneOfObject = Instantiate(gameObject) as GameObject;
-                            gameObject.name += Mathf.Pow(currentDisplacement * currentAxis * currentAxis * currentAxis, 3);
                             cloneOfObject.transform.position = transform.position + new Vector3(0, 0, -GetComponent<Renderer>().bounds.size.z + GetComponent<Renderer>().bounds.size.z * currentDisplacement);
+                            gameObject.name += Mathf.Pow(currentDisplacement * currentAxis * currentAxis * currentAxis, 3);
                             currentDisplacement = theNewDisplacement;
                         }
                         break;
@@ -120,8 +120,8 @@ public class highlightObjects : MonoBehaviour
                         else if (theNewDisplacement2 < currentDisplacement && currentDisplacement <= 0)
                         {
                             GameObject cloneOfObject = Instantiate(gameObject) as GameObject;
+                            cloneOfObject.transform.position = transform.position + new Vector3(GetComponent<Renderer>().bounds.size.x * currentDisplacement, 0, 0);
                             gameObject.name += Mathf.Pow(currentDisplacement * currentAxis * currentAxis * currentAxis, 3);
-                            cloneOfObject.transform.position = transform.position + new Vector3(-GetComponent<Renderer>().bounds.size.x + GetComponent<Renderer>().bounds.size.x * currentDisplacement, 0, 0);
                             currentDisplacement = theNewDisplacement2;
                         }
                         break;
@@ -131,15 +131,15 @@ public class highlightObjects : MonoBehaviour
                         if (theNewDisplacement3 > currentDisplacement)
                         {
                             currentDisplacement = theNewDisplacement3;
-                            gameObject.name += Mathf.Pow(currentDisplacement * currentAxis * currentAxis * currentAxis, 3);
                             GameObject cloneOfObject = Instantiate(gameObject) as GameObject;
+                            gameObject.name += Mathf.Pow(currentDisplacement * currentAxis * currentAxis * currentAxis, 3);
                             cloneOfObject.transform.position = transform.position + new Vector3(0, GetComponent<Renderer>().bounds.size.y * currentDisplacement, 0);
                         }
                         else if (theNewDisplacement3 < currentDisplacement && currentDisplacement <= 0)
                         {
                             GameObject cloneOfObject = Instantiate(gameObject) as GameObject;
+                            cloneOfObject.transform.position = transform.position + new Vector3(0, GetComponent<Renderer>().bounds.size.y * currentDisplacement, 0);
                             gameObject.name += Mathf.Pow(currentDisplacement * currentAxis * currentAxis * currentAxis, 3);
-                            cloneOfObject.transform.position = transform.position + new Vector3(0, -GetComponent<Renderer>().bounds.size.y + GetComponent<Renderer>().bounds.size.y * currentDisplacement, 0);
                             currentDisplacement = theNewDisplacement3;
                         }
                         break;
@@ -152,12 +152,7 @@ public class highlightObjects : MonoBehaviour
             currentDisplacement = 0;
             middleMouseClicked = false;
         }
-
-        if (Input.GetKey(KeyCode.Space) && isClicked)
-        {
-            ;
-        }
-
+        
         if (Input.GetKey(KeyCode.Z))
         {
             currentAxis = 0;
@@ -172,7 +167,14 @@ public class highlightObjects : MonoBehaviour
         }
         
 
+        if (isClicked && Input.GetKey(KeyCode.Space))
+        {
+            //movement of object
+        }
+
+
     }
+
     //private void OnMouseDown()
     //{
     //    if (Input.GetMouseButton(0))

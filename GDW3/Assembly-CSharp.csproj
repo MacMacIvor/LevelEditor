@@ -64,8 +64,16 @@
     <Compile Include="Assets\levelEditor.cs" />
     <Compile Include="Assets\uiScript.cs" />
     <Compile Include="Assets\pointScript.cs" />
+    <Compile Include="Assets\savingScript.cs" />
   </ItemGroup>
   <ItemGroup>
+     <None Include="Assets\SaveDataSaves.txt" />
+     <None Include="Assets\SaveData\Saves2.txt" />
+     <None Include="Assets\SaveData\Saves3.txt" />
+     <None Include="Assets\SaveData\Saves1.txt" />
+     <None Include="Assets\SaveData\Saves4.txt" />
+     <None Include="Assets\SaveData\Saves0.txt" />
+     <None Include="Assets\SaveData\Saves5.txt" />
     <Reference Include="UnityEngine">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2020.1.6f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>
