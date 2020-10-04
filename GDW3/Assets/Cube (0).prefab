@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -7927573303852163267}
   m_Layer: 8
   m_Name: Cube (0)
-  m_TagString: Untagged
+  m_TagString: EnemyShooter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -112,7 +112,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 2087262527810304938, guid: 51f270b79472b5848bf8f08e2f6992e1, type: 3}
   shootCooldownSaved: 1
   shootCooldown: 1
-  characterPos: {fileID: 4226034115256723110, guid: 8444a796b41e5af40808bf44ad599215, type: 3}
+  characterPos: {fileID: 2925805988028907213, guid: 18c3d51c4d8f8584b896d922123a6aa4, type: 3}
   bullets: {fileID: 2087262527810304917, guid: 51f270b79472b5848bf8f08e2f6992e1, type: 3}
   smoothfactor: 0.001
   smoothknockedfactor: 0.001

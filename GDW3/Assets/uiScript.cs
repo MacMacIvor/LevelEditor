@@ -7,7 +7,7 @@ public class uiScript : MonoBehaviour
     private int down = 0;
     public GameObject objectToSpawnPrefab;
     public Transform pointPos;
-
+    private float mouseWheel = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +18,7 @@ public class uiScript : MonoBehaviour
     void Update()
     {
         Vector3 mousePos = Input.mousePosition;
+        mouseWheel = Input.mouseScrollDelta.y;
         if (Input.GetKey(KeyCode.Mouse0))
         {
             if (down == 0)
@@ -35,6 +36,11 @@ public class uiScript : MonoBehaviour
         else
         {
             down = 0;
+        }
+
+        if (mouseWheel != 0 && Input.mousePosition.x < 200)
+        {
+            transform.position += new Vector3(0, mouseWheel * 10, 0);
         }
     }
 }
