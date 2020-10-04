@@ -17,9 +17,48 @@ public class cameraBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
+    private bool isEditing = false;
+    private bool isEDown = false;
     void Update()
     {
-        Vector3 newPos = characterPos.position + cameraOffset;
-        transform.position = Vector3.Slerp(transform.position, newPos, smoothfactor);
+        if (Input.GetKey(KeyCode.E))
+        {
+            if (isEDown == false)
+            {
+                isEditing = !isEditing;
+
+            }
+            isEDown = true;
+        }
+        else
+        {
+            isEDown = false;
+        }
+
+        switch (isEditing)
+        {
+            case true:
+                if (Input.GetKey(KeyCode.DownArrow))
+                {
+                    transform.position += Vector3.down;
+                }
+                else if (Input.GetKey(KeyCode.UpArrow))
+                {
+                    transform.position += Vector3.up;
+                }
+                if (Input.GetKey(KeyCode.LeftArrow))
+                {
+                    transform.position += Vector3.left;
+                }
+                else if (Input.GetKey(KeyCode.RightArrow))
+                {
+                    transform.position += Vector3.right;
+                }
+                break;
+            case false:
+                Vector3 newPos = characterPos.position + cameraOffset;
+                transform.position = Vector3.Slerp(transform.position, newPos, smoothfactor);
+                break;
+        }
     }
 }

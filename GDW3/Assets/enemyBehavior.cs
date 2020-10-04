@@ -36,38 +36,60 @@ public class enemyBehavior : MonoBehaviour
     }
 
     // Update is called once per frame
+    private bool isEditing = false;
+    private bool isEDown = false;
     void Update()
     {
-        newPos.x = characterPos.position.x;
-        newPos.z = characterPos.position.z;
-        float dist = Vector3.Magnitude(newPos - transform.position);
-        switch (beingKnockedBack)
+        if (Input.GetKey(KeyCode.E))
         {
-            case true:
-                transform.position = Vector3.Lerp(transform.position, knockedDestination, smoothknockedfactor);
-                if (Vector3.Distance(transform.position, knockedDestination) < 1.0f)
-                {
-                    beingKnockedBack = false;
-                }
-                break;
-            case false:
-                if (!(dist < 5 && dist > -5))
-                {
-                    transform.position = Vector3.Slerp(transform.position, newPos, smoothfactor);
-                }
-                else
-                {
-                    if (shootCooldown <= 0)
-                    {
-                        shootCooldown = shootCooldownSaved;
-                        spawnBullet();
-                    }
-                }
-                break;
+            if (isEDown == false)
+            {
+                isEditing = !isEditing;
+
+            }
+            isEDown = true;
+        }
+        else
+        {
+            isEDown = false;
         }
 
-        shootCooldown -= Time.deltaTime;
-        
+        switch (isEditing)
+        {
+            case true:
+                break;
+            case false:
+                newPos.x = characterPos.position.x;
+                newPos.z = characterPos.position.z;
+                float dist = Vector3.Magnitude(newPos - transform.position);
+                switch (beingKnockedBack)
+                {
+                    case true:
+                        transform.position = Vector3.Lerp(transform.position, knockedDestination, smoothknockedfactor);
+                        if (Vector3.Distance(transform.position, knockedDestination) < 1.0f)
+                        {
+                            beingKnockedBack = false;
+                        }
+                        break;
+                    case false:
+                        if (!(dist < 5 && dist > -5))
+                        {
+                            transform.position = Vector3.Slerp(transform.position, newPos, smoothfactor);
+                        }
+                        else
+                        {
+                            if (shootCooldown <= 0)
+                            {
+                                shootCooldown = shootCooldownSaved;
+                                spawnBullet();
+                            }
+                        }
+                        break;
+                }
+
+                shootCooldown -= Time.deltaTime;
+                break;
+        }
     }
 
     public void doKnockback(float heldPower, int orientation)

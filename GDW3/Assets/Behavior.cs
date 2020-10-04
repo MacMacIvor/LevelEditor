@@ -63,102 +63,126 @@ public class Behavior : MonoBehaviour
 
 
     // Update is called once per frame
+    private bool isEditing = false;
+    private bool isEDown = false;
     void Update()
     {
-        transform.Translate(playerDirection * 5 * Time.deltaTime);
-        if (Input.GetKey(KeyCode.W)) {
-            playerDirection.z = 1;
-        }
-        else if (Input.GetKey(KeyCode.S)) {
-            playerDirection.z = -1;
+        if (Input.GetKey(KeyCode.E))
+        {
+            if (isEDown == false)
+            {
+                isEditing = !isEditing;
+
+            }
+            isEDown = true;
         }
         else
         {
-            playerDirection.z = 0;
+            isEDown = false;
         }
-         if (Input.GetKey(KeyCode.A))
+
+        switch (isEditing)
         {
-            playerDirection.x = -1;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            playerDirection.x = 1;
-        }
-        else
-        {
-            playerDirection.x = 0;
-        }
-        switch (playerDirection.x)
-        {
-            case -1: //left
-                switch (playerDirection.z)
+            case true:
+                break;
+            case false:
+                transform.Translate(playerDirection * 5 * Time.deltaTime);
+                if (Input.GetKey(KeyCode.W))
                 {
-                    case -1: //down
-                        callUpdateDirection(6);
+                    playerDirection.z = 1;
+                }
+                else if (Input.GetKey(KeyCode.S))
+                {
+                    playerDirection.z = -1;
+                }
+                else
+                {
+                    playerDirection.z = 0;
+                }
+                if (Input.GetKey(KeyCode.A))
+                {
+                    playerDirection.x = -1;
+                }
+                else if (Input.GetKey(KeyCode.D))
+                {
+                    playerDirection.x = 1;
+                }
+                else
+                {
+                    playerDirection.x = 0;
+                }
+                switch (playerDirection.x)
+                {
+                    case -1: //left
+                        switch (playerDirection.z)
+                        {
+                            case -1: //down
+                                callUpdateDirection(6);
+                                break;
+                            case 0:
+                                callUpdateDirection(4);
+                                break;
+                            case 1:
+                                callUpdateDirection(1);
+                                break;
+                        }
                         break;
                     case 0:
-                        callUpdateDirection(4);
+                        switch (playerDirection.z)
+                        {
+                            case -1:
+                                callUpdateDirection(7);
+                                break;
+                            case 0:
+                                break;
+                            case 1:
+                                callUpdateDirection(2);
+                                break;
+                        }
                         break;
                     case 1:
-                        callUpdateDirection(1);
+                        switch (playerDirection.z)
+                        {
+                            case -1:
+                                callUpdateDirection(8);
+                                break;
+                            case 0:
+                                callUpdateDirection(5);
+                                break;
+                            case 1:
+                                callUpdateDirection(3);
+                                break;
+                        }
                         break;
                 }
-                break;
-            case 0: 
-                switch (playerDirection.z)
+
+
+                if (Input.GetKey(KeyCode.LeftShift) && cooldown == 0)
                 {
-                    case -1:
-                        callUpdateDirection(7);
-                        break;
-                    case 0:
-                        break;
-                    case 1:
-                        callUpdateDirection(2);
-                        break;
+                    playerDirection *= jumpModifyer;
+                    cooldown = cooldownDuration;
                 }
-                break;
-            case 1:
-                switch (playerDirection.z)
+
+                if (Input.GetKey(KeyCode.Mouse1))
                 {
-                    case -1:
-                        callUpdateDirection(8);
-                        break;
-                    case 0:
-                        callUpdateDirection(5);
-                        break;
-                    case 1:
-                        callUpdateDirection(3);
-                        break;
+                    chargeAttack();
+                    mouse1Buffer = 1;
+                }
+                else if (mouse1Buffer == 1)
+                {
+                    mouse1Buffer = 0;
+                    Debug.Log(heldPower);
+                    releaseChargeAttack();
+                }
+
+
+                if (Input.GetKey(KeyCode.Mouse0) && cooldownB == 0)
+                {
+                    basicAttack();
+                    cooldownB = cooldownBDuration;
                 }
                 break;
         }
-
-
-        if (Input.GetKey(KeyCode.LeftShift) && cooldown == 0)
-        {
-            playerDirection *= jumpModifyer;
-            cooldown = cooldownDuration;
-        }
-
-        if (Input.GetKey(KeyCode.Mouse1))
-        {
-            chargeAttack();
-            mouse1Buffer = 1;
-        }
-        else if (mouse1Buffer == 1)
-        {
-            mouse1Buffer = 0;
-            Debug.Log(heldPower);
-            releaseChargeAttack();
-        }
-
-
-        if (Input.GetKey(KeyCode.Mouse0) && cooldownB == 0)
-        {
-            basicAttack();
-            cooldownB = cooldownBDuration;
-        }
-
     }
 
     void callUpdateDirection(int num)

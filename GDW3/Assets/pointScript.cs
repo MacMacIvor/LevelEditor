@@ -11,21 +11,43 @@ public class pointScript : MonoBehaviour
     }
 
     // Update is called once per frame
+    private bool isEditing = false;
+    private bool isEDown = false;
     void Update()
     {
-        if (Input.GetMouseButton(1))
+        if (Input.GetKey(KeyCode.E))
         {
-            Vector3 position = transform.position;
-
-            Ray aRay = Camera.main.ScreenPointToRay(Input.mousePosition);
-            RaycastHit hitStuff;
-
-            if (Physics.Raycast (aRay, out hitStuff) == true)
+            if (isEDown == false)
             {
-                position = hitStuff.point;
+                isEditing = !isEditing;
+
             }
-            transform.position = position;
+            isEDown = true;
+        }
+        else
+        {
+            isEDown = false;
         }
 
+        switch (isEditing)
+        {
+            case false:
+                break;
+            case true:
+                if (Input.GetMouseButton(1))
+                {
+                    Vector3 position = transform.position;
+
+                    Ray aRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hitStuff;
+
+                    if (Physics.Raycast(aRay, out hitStuff) == true)
+                    {
+                        position = hitStuff.point;
+                    }
+                    transform.position = position;
+                }
+                break;
+        }
     }
 }

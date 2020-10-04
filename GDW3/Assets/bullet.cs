@@ -35,22 +35,45 @@ public class bullet : MonoBehaviour
     }
 
     // Update is called once per frame
+    private bool isEditing = false;
+    private bool isEDown = false;
     void Update()
     {
-        transform.position += dirPos * bulletSpeed;
-        if (Vector3.Distance(transform.position, point) > 20)
+        if (Input.GetKey(KeyCode.E))
         {
-            Destroy(gameObject, 1);
+            if (isEDown == false)
+            {
+                isEditing = !isEditing;
+
+            }
+            isEDown = true;
         }
         else
         {
-            Collider[] playerHit = Physics.OverlapSphere(transform.position, 0.15f, playerLayer); //Change to just basicRange when we find the right numbers
+            isEDown = false;
+        }
 
-            foreach (Collider player in playerHit)
-            {
-                player.GetComponent<Behavior>().takeDmg(30);
-                die();
-            }
+        switch (isEditing)
+        {
+            case true:
+                break;
+            case false:
+                transform.position += dirPos * bulletSpeed;
+                if (Vector3.Distance(transform.position, point) > 20)
+                {
+                    Destroy(gameObject, 1);
+                }
+                else
+                {
+                    Collider[] playerHit = Physics.OverlapSphere(transform.position, 0.15f, playerLayer); //Change to just basicRange when we find the right numbers
+
+                    foreach (Collider player in playerHit)
+                    {
+                        player.GetComponent<Behavior>().takeDmg(30);
+                        die();
+                    }
+                }
+                break;
         }
     }
     private void OnDrawGizmosSelected()
