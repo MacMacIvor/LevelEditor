@@ -13,6 +13,8 @@ public class highlightObjects : MonoBehaviour
     private Vector3 startPosition;
     private int currentAxis = 0;
     private bool middleMouseClicked = false;
+    private bool spaceClicked = false;
+    private bool rClicked = false;
     private Vector3 mouseStartPosition;
     private int currentDisplacement = 0;
 
@@ -169,7 +171,96 @@ public class highlightObjects : MonoBehaviour
 
         if (isClicked && Input.GetKey(KeyCode.Space))
         {
-            //movement of object
+            if (spaceClicked == false)
+            {
+                startPosition = transform.position;
+                mouseStartPosition = Input.mousePosition;
+                spaceClicked = true;
+            }
+            else
+            {
+                switch (currentAxis)
+                {
+                    case 0: //z axis
+                        float theDisplacementDist = Input.mousePosition.y - mouseStartPosition.y;
+
+                        transform.position += new Vector3(0, 0, theDisplacementDist / 30.0f);
+
+                        startPosition = transform.position;
+                        mouseStartPosition = Input.mousePosition;
+                        break;
+
+                    case 1: //x axis
+                        float theDisplacementDist2 = Input.mousePosition.x - mouseStartPosition.x;
+
+                        transform.position += new Vector3(theDisplacementDist2 / 30.0f, 0, 0);
+
+                        startPosition = transform.position;
+                        mouseStartPosition = Input.mousePosition;
+                        break;
+
+                    case 2: //y axis
+                        float theDisplacementDist3 = Input.mousePosition.y - mouseStartPosition.y;
+
+                        transform.position += new Vector3(0, theDisplacementDist3 / 30.0f, 0);
+
+                        startPosition = transform.position;
+                        mouseStartPosition = Input.mousePosition;
+                        break;
+                }
+            }
+        }
+        else
+        {
+            spaceClicked = false;
+        }
+
+
+        if (isClicked && Input.GetKey(KeyCode.R))
+        {
+            if (rClicked == false)
+            {
+                startPosition = transform.position;
+                mouseStartPosition = Input.mousePosition;
+                rClicked = true;
+            }
+            else
+            {
+                switch (currentAxis)
+                {
+                    case 0: //z axis
+                        float theDisplacementDist = Input.mousePosition.x - mouseStartPosition.x;
+
+                        transform.rotation = new Quaternion(transform.rotation.x, transform.rotation.y, transform.rotation.z + theDisplacementDist / 30.0f, 1.0f);
+
+
+                        startPosition = transform.position;
+                        mouseStartPosition = Input.mousePosition;
+                        break;
+
+                    case 1: //x axis
+                        float theDisplacementDist2 = Input.mousePosition.y - mouseStartPosition.y;
+
+                        transform.rotation = new Quaternion(transform.rotation.x + theDisplacementDist2 / 30.0f, transform.rotation.y, transform.rotation.z , 1.0f);
+
+                        startPosition = transform.position;
+                        mouseStartPosition = Input.mousePosition;
+                        break;
+
+                    case 2: //y axis
+                        float theDisplacementDist3 = Input.mousePosition.x - mouseStartPosition.x;
+
+                        transform.rotation = new Quaternion(transform.rotation.x , transform.rotation.y + theDisplacementDist3 / 30.0f, transform.rotation.z , 1.0f);
+
+                        startPosition = transform.position;
+                        mouseStartPosition = Input.mousePosition;
+                        break;
+                }
+            }
+        }
+        else
+        {
+            rClicked = false;
         }
 
 

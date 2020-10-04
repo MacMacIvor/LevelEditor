@@ -248,7 +248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &546158495
 GameObject:
@@ -344,7 +344,7 @@ Transform:
   m_LocalScale: {x: 4.0743, y: 4.0743, z: 4.0743}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:
@@ -438,101 +438,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
---- !u!1 &747091084
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 747091088}
-  - component: {fileID: 747091087}
-  - component: {fileID: 747091086}
-  - component: {fileID: 747091085}
-  m_Layer: 8
-  m_Name: Cube (2)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &747091085
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747091084}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &747091086
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747091084}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &747091087
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747091084}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &747091088
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 747091084}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.66, y: 1.71, z: -1.05}
-  m_LocalScale: {x: 1.6088, y: 1.6088, z: 1.6088}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &800930661
 GameObject:
   m_ObjectHideFlags: 0
@@ -568,7 +473,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -500, y: 208}
+  m_AnchoredPosition: {x: -471, y: 212}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &800930663
@@ -663,7 +568,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 499, y: 208}
+  m_AnchoredPosition: {x: 469, y: 211}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &839182063
@@ -811,7 +716,7 @@ RectTransform:
   - {fileID: 839182062}
   - {fileID: 800930662}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -882,7 +787,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -996,6 +901,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cube: {fileID: 4727858982069090577, guid: f64abff555789a34bbbf90ff29b687c3, type: 3}
+  BookShelf: {fileID: 7984604926201955698, guid: 35bddba5dd789e74b8debf42b81ce99c, type: 3}
+  Door: {fileID: 3002921559549028155, guid: 21b8165501f7dd0428bc7ac684d35583, type: 3}
+  Door_Frame: {fileID: 2362331983747729810, guid: 5b8c6f48367514f49b445121bc956b01, type: 3}
+  Five_Rail: {fileID: 7715766734249303797, guid: 83fda7a9ea7811a45b06c629e71b9aab, type: 3}
+  Four_Rail: {fileID: 5143471559434735768, guid: 803b0a3a4ff9e6e4ca229d6b5dd48ddd, type: 3}
+  Rail_Post: {fileID: 7406909025452766710, guid: aa5f33e0a2f70a44ba56f418a6782f78, type: 3}
+  Rising_Rail: {fileID: 6761564860610931200, guid: 1168ff9ba570d1240912948fabda52a3, type: 3}
+  Room_Plane: {fileID: 1539807246139259358, guid: ad6f3a3b5b78927479a57adbdcce639f, type: 3}
+  Stair_Support: {fileID: 8187674660246447199, guid: 8a29fd295cdc43843a101e56e6fe5bf3, type: 3}
+  Stairs: {fileID: 3827659468363244299, guid: 5402f8bd21318404b9015f20e98ed0a6, type: 3}
+  Stool: {fileID: 4358591253937310992, guid: adfd76f42941e5748822e4d26e440fa3, type: 3}
+  Table: {fileID: 4884881058856717849, guid: 66ca68a84aca8d04c81e401eef44d16c, type: 3}
+  Top_Rail: {fileID: 5823212081408157218, guid: 64e2a848b2e33d8489fef71c69d7a87c, type: 3}
+  Upper_Floor: {fileID: 5209364786167670931, guid: 473077a279bce334184627fa653deafb, type: 3}
+  EnemyShooter: {fileID: 4644207836265825187, guid: b9a175e490e05fa4e8c24de786a58a2c, type: 3}
+  MainCharacter: {fileID: 4226034115256723115, guid: 8444a796b41e5af40808bf44ad599215, type: 3}
+  BookShelfWide: {fileID: 7963873776142097035, guid: 7e45e91ea5174234fb6eaae7f9d274d2, type: 3}
+  Fire_Place: {fileID: 8071953394546775573, guid: 566cfa01a1534f747ae2b236c25f222c, type: 3}
 --- !u!1 &1235671107
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,7 +1012,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1294897602
 GameObject:
@@ -1216,7 +1139,7 @@ Transform:
   m_Children:
   - {fileID: 1294897603}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1665775897
 MonoBehaviour:
@@ -1324,7 +1247,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4226034115256723110, guid: 8444a796b41e5af40808bf44ad599215, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4226034115256723110, guid: 8444a796b41e5af40808bf44ad599215, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1346,6 +1269,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: player
       objectReference: {fileID: 0}
+    - target: {fileID: 4226034115256723115, guid: 8444a796b41e5af40808bf44ad599215, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8444a796b41e5af40808bf44ad599215, type: 3}
 --- !u!1001 &4644207836054354567
@@ -1358,6 +1285,10 @@ PrefabInstance:
     - target: {fileID: 4644207836265825187, guid: b9a175e490e05fa4e8c24de786a58a2c, type: 3}
       propertyPath: m_Name
       value: Cube (0)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4644207836265825187, guid: b9a175e490e05fa4e8c24de786a58a2c, type: 3}
+      propertyPath: m_TagString
+      value: EnemyShooter
       objectReference: {fileID: 0}
     - target: {fileID: 4644207836265825198, guid: b9a175e490e05fa4e8c24de786a58a2c, type: 3}
       propertyPath: characterPos
