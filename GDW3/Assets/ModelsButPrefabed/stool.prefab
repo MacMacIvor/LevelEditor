@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 3978652143979501482}
   - component: {fileID: 43022372943534095}
   - component: {fileID: 2845201665636789445}
+  - component: {fileID: 410964475399171334}
+  - component: {fileID: -307100313135013635}
   m_Layer: 0
   m_Name: stool
   m_TagString: Stool
@@ -81,3 +83,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &410964475399171334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4358591253937310992}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0c139436b216d449b573520aa9e917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Highlighting: {fileID: 2100000, guid: 767bc7df01f75a842add161109d85db8, type: 2}
+  originalMat: {fileID: 2100000, guid: 326d7a570324a0f48bce3fc5f83ca42e, type: 2}
+--- !u!65 &-307100313135013635
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4358591253937310992}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.005, y: 0.005, z: 0.005000001}
+  m_Center: {x: 0, y: 0.0025274754, z: 4.656613e-10}

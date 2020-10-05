@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 2167830268008964964}
   - component: {fileID: 3006845108118924481}
   - component: {fileID: 1035408966242031627}
+  - component: {fileID: -2963710299050018380}
+  - component: {fileID: 1180032569822571590}
   m_Layer: 0
   m_Name: room_plane
   m_TagString: Room_Plane
@@ -81,3 +83,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-2963710299050018380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539807246139259358}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0c139436b216d449b573520aa9e917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Highlighting: {fileID: 2100000, guid: 767bc7df01f75a842add161109d85db8, type: 2}
+  originalMat: {fileID: 2100000, guid: 326d7a570324a0f48bce3fc5f83ca42e, type: 2}
+--- !u!65 &1180032569822571590
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539807246139259358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.009999999, z: 2.9802322e-10}
+  m_Center: {x: -0.005, y: 0.0049999994, z: -1.4901161e-10}

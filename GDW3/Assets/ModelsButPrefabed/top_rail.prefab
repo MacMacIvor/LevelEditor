@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6601120528934173848}
   - component: {fileID: 7796926883532632893}
   - component: {fileID: 5463087320757897207}
+  - component: {fileID: -3484402118612980891}
+  - component: {fileID: 7884595813808959522}
   m_Layer: 0
   m_Name: top_rail
   m_TagString: Top_Rail
@@ -81,3 +83,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &-3484402118612980891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823212081408157218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0c139436b216d449b573520aa9e917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Highlighting: {fileID: 2100000, guid: 767bc7df01f75a842add161109d85db8, type: 2}
+  originalMat: {fileID: 2100000, guid: 326d7a570324a0f48bce3fc5f83ca42e, type: 2}
+--- !u!65 &7884595813808959522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823212081408157218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.01, y: 0.00059999985, z: 0.017993798}
+  m_Center: {x: -0.005, y: -0.00029999993, z: 0.011003147}

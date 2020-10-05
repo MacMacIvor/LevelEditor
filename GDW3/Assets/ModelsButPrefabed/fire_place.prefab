@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 8885186951914212527}
   - component: {fileID: 5539812240708289290}
   - component: {fileID: 7711757576879716288}
+  - component: {fileID: 216542336780965362}
+  - component: {fileID: 9071174988878390140}
   m_Layer: 0
   m_Name: fire_place
   m_TagString: Fire_Place
@@ -81,3 +83,30 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &216542336780965362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8071953394546775573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da0c139436b216d449b573520aa9e917, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Highlighting: {fileID: 2100000, guid: 767bc7df01f75a842add161109d85db8, type: 2}
+  originalMat: {fileID: 2100000, guid: 326d7a570324a0f48bce3fc5f83ca42e, type: 2}
+--- !u!65 &9071174988878390140
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8071953394546775573}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.02, y: 0.009999998, z: 0.059999987}
+  m_Center: {x: 0, y: 0.004999999, z: 0.029999994}

@@ -7,6 +7,10 @@ public class highlightObjects : MonoBehaviour
     //Need to make a shader for the outline to work
     Color colour = new Color(0, 1, 1, 1);
     MeshRenderer render;
+
+    public Material Highlighting;
+    public Material originalMat;
+
     private bool isClicked = false;
     private bool isOnMouse = false;
 
@@ -29,10 +33,19 @@ public class highlightObjects : MonoBehaviour
     }
 
     // Update is called once per frame
-    private bool isEditing = false;
+    private bool isEditing = true;
     private bool isEDown = false;
     void Update()
     {
+        if (isClicked) //Highlight when selected
+        {
+            GetComponent<Renderer>().material = Highlighting;
+        }
+        else //Un-highlight when not selected
+        {
+            GetComponent<Renderer>().material = originalMat;
+        }
+
         if (Input.GetKey(KeyCode.E))
         {
             if (isEDown == false)
@@ -53,16 +66,29 @@ public class highlightObjects : MonoBehaviour
                 break;
 
             case true:
+
+                
+
                 if (Input.GetMouseButton(0))
                 {
+
+                    /*
+                      Ray aRay = Camera.main.ScreenPointToRay(Input.mousePosition);
+                    RaycastHit hitStuff;
+
+                    if (Physics.Raycast(aRay, out hitStuff) == true)
+                    {
+                    }
+
+                     */
 
                     Ray aRay = Camera.main.ScreenPointToRay(Input.mousePosition);
                     RaycastHit hitStuff;
 
-                    if (Physics.Raycast(aRay, out hitStuff))
+                    if (Physics.Raycast(aRay, out hitStuff) == true)
                     {
-                        if (hitStuff.transform)
-                        {
+                        //if (hitStuff.transform)
+                        //{
                             if (hitStuff.transform.gameObject.name == gameObject.name)
                             {
                                 isClicked = true;
@@ -71,7 +97,7 @@ public class highlightObjects : MonoBehaviour
                             {
                                 isClicked = false;
                             }
-                        }
+                        //}
                     }
 
 
