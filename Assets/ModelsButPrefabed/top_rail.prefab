@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5463087320757897207}
   - component: {fileID: -3484402118612980891}
   - component: {fileID: 7884595813808959522}
+  - component: {fileID: 2424933119776988861}
   m_Layer: 0
   m_Name: top_rail
   m_TagString: Top_Rail
@@ -110,3 +111,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.00059999985, z: 0.017993798}
   m_Center: {x: -0.005, y: -0.00029999993, z: 0.011003147}
+--- !u!114 &2424933119776988861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5823212081408157218}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc228f822ba150d43ae401383865623b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8075821127699218208}
   - component: {fileID: 6851387069412859487}
   - component: {fileID: 6480215826658898770}
+  - component: {fileID: -5777713105566421982}
   m_Layer: 0
   m_Name: five_rail
   m_TagString: Five_Rail
@@ -110,3 +111,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.00059999985, z: 0.008999999}
   m_Center: {x: -0.005, y: -0.00029999993, z: 0.0055000014}
+--- !u!114 &-5777713105566421982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7715766734249303797}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc228f822ba150d43ae401383865623b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

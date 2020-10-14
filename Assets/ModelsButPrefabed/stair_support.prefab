@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7683293560637703562}
   - component: {fileID: 936950033806242417}
   - component: {fileID: -176815342295955027}
+  - component: {fileID: -3010345266743671320}
   m_Layer: 0
   m_Name: stair_support
   m_TagString: Stair_Support
@@ -27,8 +28,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8187674660246447199}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
-  m_LocalPosition: {x: -8.633671, y: -0.000000834465, z: 10.363972}
+  m_LocalRotation: {x: -0.57735026, y: 0, z: 0, w: 0.81649655}
+  m_LocalPosition: {x: 0.2772326, y: 3.847678, z: 3.454619}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 0}
@@ -110,3 +111,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.009999998, z: 0.009999998}
   m_Center: {x: 0.005, y: 0.004999999, z: 0.004999999}
+--- !u!114 &-3010345266743671320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8187674660246447199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc228f822ba150d43ae401383865623b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5104015554077117397}
   - component: {fileID: -2264715254135875328}
   - component: {fileID: -72726457179332782}
+  - component: {fileID: -7339273644084585714}
   m_Layer: 0
   m_Name: rising_rail
   m_TagString: Rising_Rail
@@ -110,3 +111,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0100000035, y: 0.00060000276, z: 0.01899376}
   m_Center: {x: -0.0050000018, y: -0.00030000103, z: 0.011503127}
+--- !u!114 &-7339273644084585714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6761564860610931200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc228f822ba150d43ae401383865623b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
