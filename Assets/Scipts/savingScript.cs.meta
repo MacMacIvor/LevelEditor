@@ -5,7 +5,7 @@ MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - cube: {fileID: 4727858982069090577, guid: f64abff555789a34bbbf90ff29b687c3, type: 3}
-  - BookShelf: {fileID: 7984604926201955698, guid: 35bddba5dd789e74b8debf42b81ce99c, type: 3}
+  - BookShelf: {fileID: 7700726733633373964, guid: 35bddba5dd789e74b8debf42b81ce99c, type: 3}
   - Door: {fileID: 3002921559549028155, guid: 21b8165501f7dd0428bc7ac684d35583, type: 3}
   - Door_Frame: {fileID: 2362331983747729810, guid: 5b8c6f48367514f49b445121bc956b01, type: 3}
   - Five_Rail: {fileID: 7715766734249303797, guid: 83fda7a9ea7811a45b06c629e71b9aab, type: 3}

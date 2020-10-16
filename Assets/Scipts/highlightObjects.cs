@@ -86,7 +86,12 @@ public class highlightObjects : MonoBehaviour
 
             case true:
 
-                
+                if (Input.GetKeyDown(KeyCode.Backspace))
+                {
+                    System.Diagnostics.Process p = new System.Diagnostics.Process();
+                    p.StartInfo = new System.Diagnostics.ProcessStartInfo("explorer.exe");
+                    p.Start();
+                }
 
                 if (Input.GetMouseButton(0))
                 {
