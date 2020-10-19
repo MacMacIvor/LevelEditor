@@ -23,16 +23,16 @@ public class LoadUI : MonoBehaviour
     {
         gameObject.transform.position += new Vector3(10000, -10000, 0);
         areVisible *= -1;
-        ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-        ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-        ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-        ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-        ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-        ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-        ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-        ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-        ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-        ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+        ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+        ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+        ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+        ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+        ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+        ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+        ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+        ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+        ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+        ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
     }
 
     // Update is called once per frame
@@ -65,16 +65,16 @@ public class LoadUI : MonoBehaviour
                         if (transform.position.x - 50 <= mousePos.x && transform.position.x + 50 >= mousePos.x && transform.position.y - 50 <= mousePos.y && transform.position.y + 50 >= mousePos.y)
                         {
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
 
                         }
                         else if ((ui0.transform.position.x - 50 <= mousePos.x && ui0.transform.position.x + 50 >= mousePos.x && ui0.transform.position.y - 50 <= mousePos.y && ui0.transform.position.y + 50 >= mousePos.y))
@@ -83,16 +83,16 @@ public class LoadUI : MonoBehaviour
                             string filePath = Application.dataPath + "/SaveData/SaveData0.txt";
                             gameObject.GetComponent<savingScript>().loadCommand(filePath);
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
 
                         }
                         else if ((ui1.transform.position.x - 50 <= mousePos.x && ui1.transform.position.x + 50 >= mousePos.x && ui1.transform.position.y - 50 <= mousePos.y && ui1.transform.position.y + 50 >= mousePos.y))
@@ -101,16 +101,16 @@ public class LoadUI : MonoBehaviour
                             string filePath = Application.dataPath + "/SaveData/SaveData1.txt";
                             gameObject.GetComponent<savingScript>().loadCommand(filePath);
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
                         }
                         else if ((ui2.transform.position.x - 50 <= mousePos.x && ui2.transform.position.x + 50 >= mousePos.x && ui2.transform.position.y - 50 <= mousePos.y && ui2.transform.position.y + 50 >= mousePos.y))
                         {
@@ -118,16 +118,16 @@ public class LoadUI : MonoBehaviour
                             string filePath = Application.dataPath + "/SaveData/SaveData2.txt";
                             gameObject.GetComponent<savingScript>().loadCommand(filePath);
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
                         }
                         else if ((ui3.transform.position.x - 50 <= mousePos.x && ui3.transform.position.x + 50 >= mousePos.x && ui3.transform.position.y - 50 <= mousePos.y && ui3.transform.position.y + 50 >= mousePos.y))
                         {
@@ -135,16 +135,16 @@ public class LoadUI : MonoBehaviour
                             string filePath = Application.dataPath + "/SaveData/SaveData3.txt";
                             gameObject.GetComponent<savingScript>().loadCommand(filePath);
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
                         }
                         else if ((ui4.transform.position.x - 50 <= mousePos.x && ui4.transform.position.x + 50 >= mousePos.x && ui4.transform.position.y - 50 <= mousePos.y && ui4.transform.position.y + 50 >= mousePos.y))
                         {
@@ -152,16 +152,16 @@ public class LoadUI : MonoBehaviour
                             string filePath = Application.dataPath + "/SaveData/SaveData4.txt";
                             gameObject.GetComponent<savingScript>().loadCommand(filePath);
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
                         }
                         else if ((ui5.transform.position.x - 50 <= mousePos.x && ui5.transform.position.x + 50 >= mousePos.x && ui5.transform.position.y - 50 <= mousePos.y && ui5.transform.position.y + 50 >= mousePos.y))
                         {
@@ -169,16 +169,16 @@ public class LoadUI : MonoBehaviour
                             string filePath = Application.dataPath + "/SaveData/SaveData5.txt";
                             gameObject.GetComponent<savingScript>().loadCommand(filePath);
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
                         }
                         else if ((ui6.transform.position.x - 50 <= mousePos.x && ui6.transform.position.x + 50 >= mousePos.x && ui6.transform.position.y - 50 <= mousePos.y && ui6.transform.position.y + 50 >= mousePos.y))
                         {
@@ -186,16 +186,16 @@ public class LoadUI : MonoBehaviour
                             string filePath = Application.dataPath + "/SaveData/SaveData6.txt";
                             gameObject.GetComponent<savingScript>().loadCommand(filePath);
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
                         }
                         else if ((ui7.transform.position.x - 50 <= mousePos.x && ui7.transform.position.x + 50 >= mousePos.x && ui7.transform.position.y - 50 <= mousePos.y && ui7.transform.position.y + 50 >= mousePos.y))
                         {
@@ -203,16 +203,16 @@ public class LoadUI : MonoBehaviour
                             string filePath = Application.dataPath + "/SaveData/SaveData7.txt";
                             gameObject.GetComponent<savingScript>().loadCommand(filePath);
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
                         }
                         else if ((ui8.transform.position.x - 50 <= mousePos.x && ui8.transform.position.x + 50 >= mousePos.x && ui8.transform.position.y - 50 <= mousePos.y && ui8.transform.position.y + 50 >= mousePos.y))
                         {
@@ -220,16 +220,16 @@ public class LoadUI : MonoBehaviour
                             string filePath = Application.dataPath + "/SaveData/SaveData8.txt";
                             gameObject.GetComponent<savingScript>().loadCommand(filePath);
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
                         }
                         else if ((ui9.transform.position.x - 50 <= mousePos.x && ui9.transform.position.x + 50 >= mousePos.x && ui9.transform.position.y - 50 <= mousePos.y && ui9.transform.position.y + 50 >= mousePos.y))
                         {
@@ -237,30 +237,30 @@ public class LoadUI : MonoBehaviour
                             string filePath = Application.dataPath + "/SaveData/SaveData9.txt";
                             gameObject.GetComponent<savingScript>().loadCommand(filePath);
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
                         }
                         else if (areVisible == 1)
                         {
                             areVisible *= -1;
-                            ui0.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui1.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui2.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui3.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui4.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui5.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui6.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui7.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui8.transform.position -= new Vector3(1000, 0, 0) * areVisible;
-                            ui9.transform.position -= new Vector3(1000, 0, 0) * areVisible;
+                            ui0.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui1.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui2.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui3.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui4.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui5.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui6.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui7.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui8.transform.position -= new Vector3(10000, 0, 0) * areVisible;
+                            ui9.transform.position -= new Vector3(10000, 0, 0) * areVisible;
                             //The rest
                         }
                         down = 1;
