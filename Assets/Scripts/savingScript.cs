@@ -159,7 +159,7 @@ public class savingScript : MonoBehaviour
                         case "EnemyShooter":
                             gameObject.GetComponent<factory>().spawn(objectName, objectPosition, EnemyShooter);
                             break;
-                        case "MainCharacter":
+                        case "Player":
                             gameObject.GetComponent<factory>().spawn(objectName, objectPosition, MainCharacter);
                             break;
                         case "BookShelfWide":

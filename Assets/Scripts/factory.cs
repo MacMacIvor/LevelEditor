@@ -402,7 +402,7 @@ public class factory : MonoBehaviour
                 MainCharacter = obj;
 
             }
-            public override string objName => "MainCharacter";
+            public override string objName => "Player";
 
             public override void initiateObj()
             {
@@ -472,7 +472,7 @@ public class factory : MonoBehaviour
                     return new instantiateBookShelfWide(position, obj);
                 case "EnemyShooter":
                     return new instantiateBookShelfWide(position, obj);
-                case "MainCharacter":
+                case "Player":
                     return new instantiateBookShelfWide(position, obj);
                 case "Fire_Place":
                     return new instantiateBookShelfWide(position, obj);
